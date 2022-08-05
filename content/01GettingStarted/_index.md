@@ -4,7 +4,7 @@ chapter: true
 weight: 1
 ---
 
-# Check Point CGNS Workshop - Getting started
+# Getting started
 
-### Welcome
+### Welcome to the workshop!
 

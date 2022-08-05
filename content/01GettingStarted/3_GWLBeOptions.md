@@ -8,7 +8,7 @@ weight: 3
 
 ### Distributed Architectures 
 
-Distributed GWLB Architectures feature an IGW and GWLBe in each VPC.  Accordingly, the ingres & egress Internet traffic from that VPC use the local IGW. 
+Distributed GWLB Architectures feature an IGW and GWLBe in each VPC.  Accordingly, the ingress & egress Internet traffic from that VPC use the local IGW. 
 
 ![dist](https://chkp-gwlb-ws01.s3.us-west-2.amazonaws.com/dist-01.png)
 
