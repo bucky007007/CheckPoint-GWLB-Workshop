@@ -1,5 +1,3 @@
-# AWSWorkshop.io base workshop 
+# Check Point CloudGuard Network Security(CGNS) Workshop - Integration with AWS Gateway Load Balancer(GWLB)
 
-This is a base workshop.  Clone and start from this repo to create your workshop.
-
-
+In this workshop you learn about how Check Point CloudGuard Network Security integrates with AWS Gateway Load Balancer.
