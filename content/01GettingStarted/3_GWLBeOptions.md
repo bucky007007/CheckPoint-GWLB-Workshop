@@ -4,7 +4,7 @@ chapter: true
 weight: 3
 ---
 
-# GWLBe Options
+# AWS GWLBe Options
 
 ### Distributed Architectures 
 

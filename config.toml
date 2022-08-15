@@ -45,17 +45,17 @@ enableEmoji = true
 home = [ "HTML", "RSS", "JSON"]
 
 [[menu.shortcuts]] 
-name = "<i class='fas fa-graduation-cap'></i> Check Point GWLB SK "
+name = "<i class='fas fa-graduation-cap'></i> Check Point AWS GWLB SecureKnowledge(SK) article "
 url = "https://supportcenter.checkpoint.com/supportcenter/portal?eventSubmit_doGoviewsolutiondetails=&solutionid=sk174447"
 weight = 10
 
 [[menu.shortcuts]]
-name = "<i class='fas fa-tools'></i> Check Point GitHub Repo for GWLB Architectures "
+name = "<i class='fas fa-tools'></i> Check Point GitHub Repo for AWS GWLB Architectures "
 url = "https://github.com/CheckPointSW-Community/CloudGuard-NS-AWS-GWLB"
 weight = 11
 
 [[menu.shortcuts]]
-name = "<i class='fas fa-tools'></i> Architecture Diagram "
+name = "<i class='fas fa-tools'></i> Check Point/AWS GWLB Architecture Diagram "
 url = "https://chkp-gwlb-ws01.s3.us-west-2.amazonaws.com/CHKP-CGNS-GWLB-WorkshopArchitecture.drawio.pdf"
 weight = 21
 

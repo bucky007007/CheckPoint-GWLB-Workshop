@@ -4,7 +4,7 @@ chapter: true
 weight: 4
 ---
 
-# GWLB Traffic Flows
+# AWS GWLB Traffic Flows
 
 ### Welcome
 
