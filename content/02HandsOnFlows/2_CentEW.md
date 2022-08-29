@@ -21,9 +21,9 @@ weight: 2
 
 ### Testing Procedure 
 
-1. Ssh to any of the EC2 hosts in Database or Shared Services VPC 
-   1. Ping another of the EC2 hosts with its private IP 
-2. Search for the internal IP’s of the EC2 Host you’re sending the ping from and to
+1. SSH to any of the EC2 hosts in Database or Shared Services VPC 
+   1. Ping one of the other EC2 hosts with its private IP 
+2. Search the Check Point logs for the internal IPs of the EC2 Host you’re sending the ping from and to
 
 ![ewlog](https://chkp-gwlb-ws01.s3.us-west-2.amazonaws.com/images/ew-log.png)
 

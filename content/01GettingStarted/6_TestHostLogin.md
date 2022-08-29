@@ -4,19 +4,22 @@ chapter: true
 weight: 6
 ---
 
-# Testing procedure
+# Testing Procedures
 
-### Login to test instances 
+### Login to test EC2 instances 
 
-The test instances are secured by inbound GWLB flows.  To access the instance, you will need to use the Load Balancer DNS names and EC2 Private keys provided in Cloudformation Output
+The test EC2 instances are secured by inbound GWLB flows.  To access the instance, you will need to use the Load Balancer DNS names and EC2 Private keys provided in Cloudformation Output
 
  Use the DNS name above to login via SSH(using Putty or Terminal) with the Private key provided to the following EC2 instances…**be sure to note the special port being used for the DB and Shared Services instances**
-   - DB instance:  dnsname:8022 
-   - Shared Services instance #1:  dnsname:8033
-   - Shared Services instance #2:  dnsname:8044
-   - Web-Tier instance:  Public IP as defined by the CFT
+   - DB instance:  **dnsname:8022** 
+   - Shared Services instance #1:  **dnsname:8033**
+   - Shared Services instance #2:  **dnsname:8044**
+   - Web-Tier instance:  **Public IP as defined by the CFT**
 
-#### Test Host & NLB Info
+**NOTE #1:** The username for the ec2 instances is **ec2-user**
+**NOTE #2:** To avoid having your SSH sessions timeout, run a continuous ping to the internet after connecting…GWLB connections have a hard set 350 second timeout for TCP flows
+
+#### Test EC2 Host & NLB Port Info
      
 | VPC            | EC2 Host | AZ | SSH | Internal Subnet|
 |----------------| --- | --- | --- | --- | 
@@ -25,8 +28,7 @@ The test instances are secured by inbound GWLB flows.  To access the instance, y
 | SharedServices |	shared-services-EC2-02-*** |	B |	NLB:8034 | 10.100.05x/24|
 | Web Tier       |	Web-tier-ec2-***	| A |	Public IP from CFT | 10.100.8.x/24|
 
-### ddd  
-
+###
 
 | NLB           | Listeners --> TargetGroup            | AZ      | Health Check | Internal Subnet                          |
 |---------------|--------------------------------------|---------|--------------|------------------------------------------|

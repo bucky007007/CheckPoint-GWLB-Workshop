@@ -24,7 +24,7 @@ for i in {1..100}; do ab -n 1000 -c 100 http://www.google.com; done
    1. Currently GWLB flow hashing default 5 Tuple (TCP) and 4 Tuple (UDP)
       - Multi layered protocols may be hashed differently 
    2. Currently flows are sticky for their lifetime.  If an appliance crashes, the application must re-establish TCP flow 
-2. FLOW idle timeouts 
+2. Flow idle timeouts 
    1. Currently fixed and unchangable 
       - 350s for TCP 
       - 120s for UDP 

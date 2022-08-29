@@ -11,15 +11,15 @@ weight: 3
 
 | #	   | Hop description                                               |
 |------|---------------------------------------------------------------|
-| 1    | 	DB host to SS host, 0--> TGW                                 |
-| 2    | 	TGW Attachment RT 0/ --> Sec VPC                             |
-| 3    | 	Sec VPC TGW Attach RT 0/ --> GWLBe                           |
+| 1    | 	DB host to Shared Services host, 0/ --> TGW                  |
+| 2    | 	TGW Attachment RT 0/ --> Security VPC                        |
+| 3    | 	Security VPC TGW Attach RT 0/ --> GWLBe                      |
 | 4    | 	GWLBe magic: GWLB (GENEVE) --> CGNS and return back to GWLBe |
 | 5    | 	GWLBe RT Spoke--> TGW                                        |
 | 6    | 	TGW Propagated RT --> SS Spoke/Host                          |
-| 1    | 	SS Host to Internet 0/--> TGW                                |
+| 1    | 	Shared Services host to Internet 0/--> TGW                   |
 | 2    | 	TGW Attachment RT 0/ --> Sec VPC                             |
-| 3    | 	Sec VPC TGW Attach RT 0/ --> GWLBe                           |
+| 3    | 	Security VPC TGW Attach RT 0/ --> GWLBe                      |
 | 4    | 	GWLBe magic: GWLB (GENEVE) --> CGNS and return back to GWLBe |
 | 5    | 	GWLBe RT 0/ --> NATGW                                        |
 | 6    | 	NATGW (egress NAT) 0/ --> IGW                                |
@@ -30,7 +30,7 @@ weight: 3
 
 ### Testing Procedure 
 
-1. SSH to any of the hosts in Database or SharedServices Spoke (either NLB + :8022, :8033, :8044)
+1. SSH to any of the hosts in Database or Shared Services VPC (either NLB + :8022, :8033, :8044)
    1. Ping 8.8.8.8 
    2. Curl www.google.com
 2. Search for the internal IP of the EC2 Host you’re sending the ping/curl from
