@@ -6,15 +6,15 @@ weight: 3
 
 # AWS GWLBe Options
 
-### Distributed Architectures 
+### Distributed Architecture 
 
-Distributed GWLB Architectures feature an IGW and GWLBe in each VPC.  Accordingly, the ingress & egress Internet traffic from that VPC use the local IGW. 
+The Distributed GWLB Architecture features an IGW and GWLBe in each VPC.  Accordingly, the ingress & egress Internet traffic from that VPC use the local IGW. 
 
 ![dist](https://chkp-gwlb-ws01.s3.us-west-2.amazonaws.com/dist-01.png)
 
-### Centralized Architectures
+### Centralized Architecture
 
-Centralized GWLB Architectures connect VPCs together with TGW and use a Centralized Ingress and Egress from either 
+The Centralized GWLB Architecture connects VPCs together with TGW and use a Centralized Ingress and Egress from either 
 - Combined Security VPC (as we see in this workshop)
 - Dedicated Internet VPC attached to TGW (not covered in this workshop)
 

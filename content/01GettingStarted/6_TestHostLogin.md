@@ -8,7 +8,7 @@ weight: 6
 
 ### Login to test EC2 instances 
 
-The test EC2 instances are secured by inbound GWLB flows.  To access the instance, you will need to use the Load Balancer DNS names and EC2 Private keys provided in Cloudformation Output
+The test EC2 instances are secured by inbound GWLB flows.  To access the instance, you will need to use the Load Balancer DNS names and EC2 Private keys provided in the CloudFormation Output
 
  Use the DNS name above to login via SSH(using Putty or Terminal) with the Private key provided to the following EC2 instances…**be sure to note the special port being used for the DB and Shared Services instances**
    - DB instance:  **dnsname:8022** 
@@ -17,6 +17,7 @@ The test EC2 instances are secured by inbound GWLB flows.  To access the instanc
    - Web-Tier instance:  **Public IP as defined by the CFT**
 
 **NOTE #1:** The username for the ec2 instances is **ec2-user**
+
 **NOTE #2:** To avoid having your SSH sessions timeout, run a continuous ping to the internet after connecting…GWLB connections have a hard set 350 second timeout for TCP flows
 
 #### Test EC2 Host & NLB Port Info

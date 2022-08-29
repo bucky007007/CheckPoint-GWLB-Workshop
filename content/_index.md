@@ -12,7 +12,6 @@ In this workshop you will learn how to deploy Check Point CloudGuard Network Sec
 
 ### Learning Objectives
 - Use CloudFormation template to automatically create the CloudGuard Network Security components, AWS Gateway Load Balancer, and all other required AWS resources needed to test traffic flows
-- 
 - Interact with Check Point Security Management to build a security policy
 - Test ingress, egress, and east-west traffic flows
 - Monitor the traffic flows using Check Point Security Management logging capabilities

@@ -8,6 +8,7 @@ weight: 7
 
 ### Helpful Items 
 
+- [AWS Load Balancing...including GWLB](https://aws.amazon.com/elasticloadbalancing/)
 - [AWS Blogs for GWLB ](https://aws.amazon.com/blogs/networking-and-content-delivery/category/networking-content-delivery/elastic-load-balancing/gateway-load-balancer/) 
 - [Check Point SK for GWLB Architectures](https://supportcenter.checkpoint.com/supportcenter/portal?eventSubmit_doGoviewsolutiondetails=&solutionid=sk174447&partition=Basic&product=CloudGuard)
 - Repetitive testing tool for AL2 CLI: [Apache Benchmark](https://httpd.apache.org/docs/2.4/programs/ab.html) 
