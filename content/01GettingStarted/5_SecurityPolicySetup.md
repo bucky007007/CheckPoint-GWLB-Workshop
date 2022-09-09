@@ -8,7 +8,7 @@ weight: 5
 
 ### Preparing the environment
 
-**NOTE: The below steps assume you are performing this workshop as part of an AWS Immersion Day...if you wish to run this in your _own_ environment you can simply run the following CloudFormation Template manually: [CGNS GWLB CFT](https://chkp-gwlb-workshop.s3.us-west-2.amazonaws.com/CGNS-GWLB-WS.yaml)**
+**NOTE: The below steps assume you are performing this workshop as part of an AWS Immersion Day...if you wish to run this in your _own_ environment you can simply run the following CloudFormation Template manually: [CGNS GWLB CFT](https://objectstorage.us-phoenix-1.oraclecloud.com/n/cloudguardiaas/b/aws-gwlb-workshopio-images/o/CGNS-GWLB-WS.yaml)**
 1. Browse to the AWS Event Engine link that was provided, Accept Terms and Login
    ![](https://objectstorage.us-phoenix-1.oraclecloud.com/n/cloudguardiaas/b/aws-gwlb-workshopio-images/o/2022-04-16-AWS%20GWLB-0001.png)
 2. Select the **Email One-Time Password (OTP) option**...it is recommended to send the OTP to a personal email address to avoid potential expiration of the OTP due to corporate security controls.
