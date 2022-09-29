@@ -5,28 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.101.0" />
     <meta name="description" content="Check Point CGNS Workshop focused on AWS GWLB Architectures and traffic flows">
-<meta name="author" content="Jeff Kopko">
+<meta name="author" content="Jeff Engel">
 
     <link rel="icon" href="https://awsmedia.s3.amazonaws.com/favicon.ico" type="image/x-icon" />
 
     <title>Test Host Login :: Check Point CloudGuard Network Security Workshop - AWS GWLB</title>
 
     
-    <link href="/css/nucleus.css?1656620320" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1656620320" rel="stylesheet">
-    <link href="/css/hybrid.css?1656620320" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1656620320" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1656620320" rel="stylesheet">
-    <link href="/css/auto-complete.css?1656620320" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1656620320" rel="stylesheet">
-    <link href="/css/theme.css?1656620320" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1656620320" rel="stylesheet">
+    <link href="/css/nucleus.css?1664413240" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1664413240" rel="stylesheet">
+    <link href="/css/hybrid.css?1664413240" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1664413240" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1664413240" rel="stylesheet">
+    <link href="/css/auto-complete.css?1664413240" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1664413240" rel="stylesheet">
+    <link href="/css/theme.css?1664413240" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1664413240" rel="stylesheet">
     
-    <link href="/css/theme-mine.css?1656620320" rel="stylesheet">
+    <link href="/css/theme-mine.css?1664413240" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1656620320"></script>
+    <script src="/js/jquery-3.3.1.min.js?1664413240"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -53,14 +53,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1656620320"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1656620320"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1664413240"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1664413240"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1656620320"></script>
+<script type="text/javascript" src="/js/search.js?1664413240"></script>
 
     
   </div>
@@ -140,27 +140,6 @@
       <li data-nav-id="/01gettingstarted/3_gwlbeoptions.html" title="GWLBe Options" class="dd-item ">
         <a href="/01gettingstarted/3_gwlbeoptions.html">
         GWLBe Options
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/01gettingstarted/4_trafficflows.html" title="Traffic Flows" class="dd-item ">
-        <a href="/01gettingstarted/4_trafficflows.html">
-        Traffic Flows
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -413,15 +392,15 @@
         <ul>
           
               <li>
-                  <a class="padding" href="https://supportcenter.checkpoint.com/supportcenter/portal?eventSubmit_doGoviewsolutiondetails=&amp;solutionid=sk174447"><i class='fas fa-graduation-cap'></i> Check Point GWLB SK </a>
+                  <a class="padding" href="https://supportcenter.checkpoint.com/supportcenter/portal?eventSubmit_doGoviewsolutiondetails=&amp;solutionid=sk174447"><i class='fas fa-graduation-cap'></i> Check Point AWS GWLB SecureKnowledge(SK) article </a>
               </li>
           
               <li>
-                  <a class="padding" href="https://github.com/CheckPointSW-Community/CloudGuard-NS-AWS-GWLB"><i class='fas fa-tools'></i> Check Point GitHub Repo for GWLB Architectures </a>
+                  <a class="padding" href="https://github.com/CheckPointSW-Community/CloudGuard-NS-AWS-GWLB"><i class='fas fa-tools'></i> Check Point GitHub Repo for AWS GWLB Architectures </a>
               </li>
           
               <li>
-                  <a class="padding" href="https://chkp-gwlb-ws01.s3.us-west-2.amazonaws.com/CHKP-CGNS-GWLB-WorkshopArchitecture.drawio.pdf"><i class='fas fa-tools'></i> Architecture Diagram </a>
+                  <a class="padding" href="https://chkp-gwlb-ws01.s3.us-west-2.amazonaws.com/CHKP-CGNS-GWLB-WorkshopArchitecture.drawio.pdf"><i class='fas fa-tools'></i> Check Point/AWS GWLB Architecture Diagram </a>
               </li>
           
         </ul>
@@ -484,7 +463,7 @@
             
           
           
-            <a href='/'>Check Point CGNS</a> > <a href='/01gettingstarted.html'>Getting Started</a> > Test Host Login
+            <a href='/'>Check Point CloudGuard Network Security - Integration with AWS Gateway Load Balancer</a> > <a href='/01gettingstarted.html'>Getting Started</a> > Test Host Login
           
         
           
@@ -510,17 +489,19 @@
         
 
 
-<h1 id="testing-procedure">Testing procedure</h1>
-<h3 id="login-to-test-instances">Login to test instances</h3>
-<p>The test instances are secured by inbound GWLB flows.  To access the instance, you will need to use the Load Balancer DNS names and EC2 Private keys provided in Cloudformation Output</p>
+<h1 id="testing-procedures">Testing Procedures</h1>
+<h3 id="login-to-test-ec2-instances">Login to test EC2 instances</h3>
+<p>The test EC2 instances are secured by inbound GWLB flows.  To access the instance, you will need to use the Load Balancer DNS names and EC2 Private keys provided in the CloudFormation Output</p>
 <p>Use the DNS name above to login via SSH(using Putty or Terminal) with the Private key provided to the following EC2 instances…<strong>be sure to note the special port being used for the DB and Shared Services instances</strong></p>
 <ul>
-<li>DB instance:  dnsname:8022</li>
-<li>Shared Services instance #1:  dnsname:8033</li>
-<li>Shared Services instance #2:  dnsname:8044</li>
-<li>Web-Tier instance:  Public IP as defined by the CFT</li>
+<li>DB instance:  <strong>dnsname:8022</strong></li>
+<li>Shared Services instance #1:  <strong>dnsname:8033</strong></li>
+<li>Shared Services instance #2:  <strong>dnsname:8044</strong></li>
+<li>Web-Tier instance:  <strong>Public IP as defined by the CFT</strong></li>
 </ul>
-<h4 id="test-host--nlb-info">Test Host &amp; NLB Info</h4>
+<p><strong>NOTE #1:</strong> The username for the ec2 instances is <strong>ec2-user</strong></p>
+<p><strong>NOTE #2:</strong> To avoid having your SSH sessions timeout, run a continuous ping to the internet after connecting…GWLB connections have a hard set 350 second timeout for TCP flows</p>
+<h4 id="test-ec2-host--nlb-port-info">Test EC2 Host &amp; NLB Port Info</h4>
 <table>
 <thead>
 <tr>
@@ -562,7 +543,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="ddd">ddd</h3>
+<h3 id="heading"></h3>
 <table>
 <thead>
 <tr>
@@ -727,22 +708,6 @@
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -965,19 +930,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1656620320"></script>
-    <script src="/js/perfect-scrollbar.min.js?1656620320"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1656620320"></script>
-    <script src="/js/jquery.sticky.js?1656620320"></script>
-    <script src="/js/featherlight.min.js?1656620320"></script>
-    <script src="/js/highlight.pack.js?1656620320"></script>
+    <script src="/js/clipboard.min.js?1664413240"></script>
+    <script src="/js/perfect-scrollbar.min.js?1664413240"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1664413240"></script>
+    <script src="/js/jquery.sticky.js?1664413240"></script>
+    <script src="/js/featherlight.min.js?1664413240"></script>
+    <script src="/js/highlight.pack.js?1664413240"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1656620320"></script>
-    <script src="/js/learn.js?1656620320"></script>
-    <script src="/js/hugo-learn.js?1656620320"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1664413240"></script>
+    <script src="/js/learn.js?1664413240"></script>
+    <script src="/js/hugo-learn.js?1664413240"></script>
     
         
-            <script src="/mermaid/mermaid.js?1656620320"></script>
+            <script src="/mermaid/mermaid.js?1664413240"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

@@ -12,7 +12,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/02handsonflows/2_centew.html</guid>
-      <description>Centralized E/W across Spokes Flow Description &amp;amp; Diagram # Hop description 1 DB host to SS host, 0/ &amp;ndash;&amp;gt; TGW 2 TGW Attachment RT 0/ &amp;ndash;&amp;gt; Sec VPC 3 Sec VPC TGW Attach RT 0/ &amp;ndash;&amp;gt; GWLBe 4 GWLBe magic: GWLB (GENEVE) &amp;ndash;&amp;gt; CGNS and return back to GWLBe 5 GWLBe RT Spoke &amp;ndash;&amp;gt; TGW 6 TGW Propagated RT &amp;ndash;&amp;gt; SS Spoke/Host Testing Procedure Ssh to any of the EC2 hosts in Database or Shared Services VPC Ping another of the EC2 hosts with its private IP Search for the internal IP’s of the EC2 Host you’re sending the ping from and to </description>
+      <description>Centralized E/W across Spokes Flow Description &amp;amp; Diagram # Hop description 1 DB host to SS host, 0/ &amp;ndash;&amp;gt; TGW 2 TGW Attachment RT 0/ &amp;ndash;&amp;gt; Sec VPC 3 Sec VPC TGW Attach RT 0/ &amp;ndash;&amp;gt; GWLBe 4 GWLBe magic: GWLB (GENEVE) &amp;ndash;&amp;gt; CGNS and return back to GWLBe 5 GWLBe RT Spoke &amp;ndash;&amp;gt; TGW 6 TGW Propagated RT &amp;ndash;&amp;gt; SS Spoke/Host Testing Procedure SSH to any of the EC2 hosts in Database or Shared Services VPC Ping one of the other EC2 hosts with its private IP Search the Check Point logs for the internal IPs of the EC2 Host you’re sending the ping from and to </description>
     </item>
     
     <item>
@@ -21,7 +21,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/02handsonflows/3_centegress.html</guid>
-      <description>Centralized Egress Flow Description &amp;amp; Diagram # Hop description 1 DB host to SS host, 0&amp;ndash;&amp;gt; TGW 2 TGW Attachment RT 0/ &amp;ndash;&amp;gt; Sec VPC 3 Sec VPC TGW Attach RT 0/ &amp;ndash;&amp;gt; GWLBe 4 GWLBe magic: GWLB (GENEVE) &amp;ndash;&amp;gt; CGNS and return back to GWLBe 5 GWLBe RT Spoke&amp;ndash;&amp;gt; TGW 6 TGW Propagated RT &amp;ndash;&amp;gt; SS Spoke/Host 1 SS Host to Internet 0/&amp;ndash;&amp;gt; TGW 2 TGW Attachment RT 0/ &amp;ndash;&amp;gt; Sec VPC 3 Sec VPC TGW Attach RT 0/ &amp;ndash;&amp;gt; GWLBe 4 GWLBe magic: GWLB (GENEVE) &amp;ndash;&amp;gt; CGNS and return back to GWLBe 5 GWLBe RT 0/ &amp;ndash;&amp;gt; NATGW 6 NATGW (egress NAT) 0/ &amp;ndash;&amp;gt; IGW 7 IGW &amp;ndash;&amp;gt; Internet host 8-13 Reverse flow Testing Procedure SSH to any of the hosts in Database or SharedServices Spoke (either NLB + :8022, :8033, :8044) Ping 8.</description>
+      <description>Centralized Egress Flow Description &amp;amp; Diagram # Hop description 1 DB host to Shared Services host, 0/ &amp;ndash;&amp;gt; TGW 2 TGW Attachment RT 0/ &amp;ndash;&amp;gt; Security VPC 3 Security VPC TGW Attach RT 0/ &amp;ndash;&amp;gt; GWLBe 4 GWLBe magic: GWLB (GENEVE) &amp;ndash;&amp;gt; CGNS and return back to GWLBe 5 GWLBe RT Spoke&amp;ndash;&amp;gt; TGW 6 TGW Propagated RT &amp;ndash;&amp;gt; SS Spoke/Host 1 Shared Services host to Internet 0/&amp;ndash;&amp;gt; TGW 2 TGW Attachment RT 0/ &amp;ndash;&amp;gt; Sec VPC 3 Security VPC TGW Attach RT 0/ &amp;ndash;&amp;gt; GWLBe 4 GWLBe magic: GWLB (GENEVE) &amp;ndash;&amp;gt; CGNS and return back to GWLBe 5 GWLBe RT 0/ &amp;ndash;&amp;gt; NATGW 6 NATGW (egress NAT) 0/ &amp;ndash;&amp;gt; IGW 7 IGW &amp;ndash;&amp;gt; Internet host 8-13 Reverse flow Testing Procedure SSH to any of the hosts in Database or Shared Services VPC (either NLB + :8022, :8033, :8044) Ping 8.</description>
     </item>
     
     <item>

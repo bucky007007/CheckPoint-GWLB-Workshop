@@ -5,28 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.101.0" />
     <meta name="description" content="Check Point CGNS Workshop focused on AWS GWLB Architectures and traffic flows">
-<meta name="author" content="Jeff Kopko">
+<meta name="author" content="Jeff Engel">
 
     <link rel="icon" href="https://awsmedia.s3.amazonaws.com/favicon.ico" type="image/x-icon" />
 
     <title>Initial Setup :: Check Point CloudGuard Network Security Workshop - AWS GWLB</title>
 
     
-    <link href="/css/nucleus.css?1656620320" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1656620320" rel="stylesheet">
-    <link href="/css/hybrid.css?1656620320" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1656620320" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1656620320" rel="stylesheet">
-    <link href="/css/auto-complete.css?1656620320" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1656620320" rel="stylesheet">
-    <link href="/css/theme.css?1656620320" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1656620320" rel="stylesheet">
+    <link href="/css/nucleus.css?1664413240" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1664413240" rel="stylesheet">
+    <link href="/css/hybrid.css?1664413240" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1664413240" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1664413240" rel="stylesheet">
+    <link href="/css/auto-complete.css?1664413240" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1664413240" rel="stylesheet">
+    <link href="/css/theme.css?1664413240" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1664413240" rel="stylesheet">
     
-    <link href="/css/theme-mine.css?1656620320" rel="stylesheet">
+    <link href="/css/theme-mine.css?1664413240" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1656620320"></script>
+    <script src="/js/jquery-3.3.1.min.js?1664413240"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -53,14 +53,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1656620320"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1656620320"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1664413240"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1664413240"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1656620320"></script>
+<script type="text/javascript" src="/js/search.js?1664413240"></script>
 
     
   </div>
@@ -140,27 +140,6 @@
       <li data-nav-id="/01gettingstarted/3_gwlbeoptions.html" title="GWLBe Options" class="dd-item ">
         <a href="/01gettingstarted/3_gwlbeoptions.html">
         GWLBe Options
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/01gettingstarted/4_trafficflows.html" title="Traffic Flows" class="dd-item ">
-        <a href="/01gettingstarted/4_trafficflows.html">
-        Traffic Flows
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -413,15 +392,15 @@
         <ul>
           
               <li>
-                  <a class="padding" href="https://supportcenter.checkpoint.com/supportcenter/portal?eventSubmit_doGoviewsolutiondetails=&amp;solutionid=sk174447"><i class='fas fa-graduation-cap'></i> Check Point GWLB SK </a>
+                  <a class="padding" href="https://supportcenter.checkpoint.com/supportcenter/portal?eventSubmit_doGoviewsolutiondetails=&amp;solutionid=sk174447"><i class='fas fa-graduation-cap'></i> Check Point AWS GWLB SecureKnowledge(SK) article </a>
               </li>
           
               <li>
-                  <a class="padding" href="https://github.com/CheckPointSW-Community/CloudGuard-NS-AWS-GWLB"><i class='fas fa-tools'></i> Check Point GitHub Repo for GWLB Architectures </a>
+                  <a class="padding" href="https://github.com/CheckPointSW-Community/CloudGuard-NS-AWS-GWLB"><i class='fas fa-tools'></i> Check Point GitHub Repo for AWS GWLB Architectures </a>
               </li>
           
               <li>
-                  <a class="padding" href="https://chkp-gwlb-ws01.s3.us-west-2.amazonaws.com/CHKP-CGNS-GWLB-WorkshopArchitecture.drawio.pdf"><i class='fas fa-tools'></i> Architecture Diagram </a>
+                  <a class="padding" href="https://chkp-gwlb-ws01.s3.us-west-2.amazonaws.com/CHKP-CGNS-GWLB-WorkshopArchitecture.drawio.pdf"><i class='fas fa-tools'></i> Check Point/AWS GWLB Architecture Diagram </a>
               </li>
           
         </ul>
@@ -484,7 +463,7 @@
             
           
           
-            <a href='/'>Check Point CGNS</a> > <a href='/01gettingstarted.html'>Getting Started</a> > Initial Setup
+            <a href='/'>Check Point CloudGuard Network Security - Integration with AWS Gateway Load Balancer</a> > <a href='/01gettingstarted.html'>Getting Started</a> > Initial Setup
           
         
           
@@ -511,102 +490,95 @@
 
 
 <h1 id="initial-setup-credentials-and-check-point-security-policy-setup">Initial Setup (Credentials and Check Point Security Policy Setup)</h1>
-<h3 id="cloudformation-and-credentials">CloudFormation and Credentials</h3>
-<p>To get started with this workshop, you&rsquo;ll first need to gather some information from the CloudFormation stack that was used to build the Workshop Architecture.</p>
+<h3 id="preparing-the-environment">Preparing the environment</h3>
+<p><strong>NOTE: The below steps assume you are performing this workshop as part of an AWS Immersion Day&hellip;if you wish to run this in your <em>own</em> environment you can simply run the following CloudFormation Template manually: <a href="https://gwlb.s3.us-east-2.amazonaws.com/CGNS-GWLB-WS.yaml">CGNS GWLB CFT</a></strong></p>
 <ol>
-<li>
-<p>Login to the AWS Console and navigate to the CloudFormation Console</p>
+<li>Browse to the AWS Event Engine link that was provided, Accept Terms and Login
+<img src="https://objectstorage.us-phoenix-1.oraclecloud.com/n/cloudguardiaas/b/aws-gwlb-workshopio-images/o/2022-04-16-AWS%20GWLB-0001.png" alt=""></li>
+<li>Select the <strong>Email One-Time Password (OTP) option</strong>&hellip;it is recommended to send the OTP to a personal email address to avoid potential expiration of the OTP due to corporate security controls.
+<img src="https://objectstorage.us-phoenix-1.oraclecloud.com/n/cloudguardiaas/b/aws-gwlb-workshopio-images/o/2022-04-16-AWS%20GWLB-0002.png" alt=""></li>
+<li>After entering your OTP you should see a screen like this:
+<img src="https://objectstorage.us-phoenix-1.oraclecloud.com/n/cloudguardiaas/b/aws-gwlb-workshopio-images/o/2022-04-16-AWS%20GWLB-0003.png" alt=""></li>
+<li>Select the <strong>SSH Key</strong> option above
+<img src="https://objectstorage.us-phoenix-1.oraclecloud.com/n/cloudguardiaas/b/aws-gwlb-workshopio-images/o/2022-04-16-AWS%20GWLB-0004.png" alt="">
+<ul>
+<li><strong>Download Key</strong> to a location on your computer</li>
+<li>Copy the <strong>Key Fingerprint</strong> to a text file</li>
+<li>Copy the <strong>Key Material</strong> to a second text file</li>
+<li>Click <strong>OK</strong> when done</li>
+</ul>
 </li>
-<li>
-<p>Within the <strong>Stacks</strong> listing, deselect <strong>View Nested</strong> and choose the stack you created or the stack beginning with mod-module-1-######</p>
-<p><img src="https://chkp-gwlb-ws01.s3.us-west-2.amazonaws.com/images/stack-nest.png" alt="stack-nest">
-<img src="https://chkp-gwlb-ws01.s3.us-west-2.amazonaws.com/images/stack-choice.png" alt="stack-choice"></p>
+<li>If you are using PuTTY you can use PuTTYgen to create the PPK file needed from the PEM file downloaded in step <strong>A</strong> above</li>
+<li>Click on <strong>AWS Console</strong>
+<img src="https://objectstorage.us-phoenix-1.oraclecloud.com/n/cloudguardiaas/b/aws-gwlb-workshopio-images/o/2022-04-16-AWS%20GWLB-0005.png" alt=""></li>
+<li>Select <strong>Copy Login Link</strong> and save it to a text file and followed by selecting <strong>Open AWS Console</strong>(will open in a new tab)
+<img src="https://objectstorage.us-phoenix-1.oraclecloud.com/n/cloudguardiaas/b/aws-gwlb-workshopio-images/o/2022-04-16-AWS%20GWLB-0006.png" alt=""></li>
+<li>After launching the AWS console double-check that you are in <strong>Oregon(us-west-2)</strong>  &raquo;&gt;  <strong><em>NOTE: Only required with Immersion Day</em></strong>
+<img src="https://objectstorage.us-phoenix-1.oraclecloud.com/n/cloudguardiaas/b/aws-gwlb-workshopio-images/o/2022-04-16-AWS%20GWLB-0007.png" alt=""></li>
+<li>Navigate to the <strong>CloudFormation</strong> area in the AWS Console
+<img src="https://objectstorage.us-phoenix-1.oraclecloud.com/n/cloudguardiaas/b/aws-gwlb-workshopio-images/o/2022-04-16-AWS%20GWLB-0008.png" alt=""></li>
+<li>In the <strong>Stacks</strong> view click <strong>View nested</strong> to hide all nested Stacks and then select the remaining Stack to view its details and output.
+<img src="https://objectstorage.us-phoenix-1.oraclecloud.com/n/cloudguardiaas/b/aws-gwlb-workshopio-images/o/2022-04-16-AWS%20GWLB-0009.png" alt="">
+<img src="https://objectstorage.us-phoenix-1.oraclecloud.com/n/cloudguardiaas/b/aws-gwlb-workshopio-images/o/2022-04-16-AWS%20GWLB-0010.png" alt=""></li>
+<li>Navigate to <strong>Outputs</strong> and record the keys and values (highlighting, copying and pasting into excel may be the best/cleanest method)
+<img src="https://objectstorage.us-phoenix-1.oraclecloud.com/n/cloudguardiaas/b/aws-gwlb-workshopio-images/o/2022-04-16-AWS%20GWLB-0011.png" alt="">
+<img src="https://objectstorage.us-phoenix-1.oraclecloud.com/n/cloudguardiaas/b/aws-gwlb-workshopio-images/o/2022-04-16-AWS%20GWLB-0012.png" alt=""></li>
+<li>Using the URL associated with the <strong>01SmartConsoleURL</strong> key in the CFT output gives you the Public IP for the Check Point Security Management Server
+<img src="https://objectstorage.us-phoenix-1.oraclecloud.com/n/cloudguardiaas/b/aws-gwlb-workshopio-images/o/2022-04-16-AWS%20GWLB-0013.png" alt=""></li>
+<li>Login to the Check Point SmartConsole application via one of two methods:
+<ul>
+<li>URL provided in the previous step to access the Web SmartConsole: https://publicIP/smartconsole (make sure to open it in a new tab)
+<img src="https://objectstorage.us-phoenix-1.oraclecloud.com/n/cloudguardiaas/b/aws-gwlb-workshopio-images/o/2022-04-16-AWS%20GWLB-001.png" alt=""></li>
+<li>R81.10 SmartConsole Windows application &gt; Use Public IP from above&hellip;if you don&rsquo;t already have it you can download it <a href="https://supportcenter.checkpoint.com/supportcenter/portal/role/supportcenterUser/page/default.psml/media-type/html?action=portlets.DCFileAction&amp;eventSubmit_doGetdcdetails=&amp;fileid=121500">HERE</a>
+<img src="https://objectstorage.us-phoenix-1.oraclecloud.com/n/cloudguardiaas/b/aws-gwlb-workshopio-images/o/2022-04-16-AWS%20GWLB-002.png" alt=""></li>
+</ul>
 </li>
-<li>
-<p>Navigate to <strong>Stack Outputs</strong> and record all the credentials, keys, and values.  We will need these later in the workshop</p>
-<p><img src="https://chkp-gwlb-ws01.s3.us-west-2.amazonaws.com/images/stack-output.png" alt="stack-output">
-<img src="https://chkp-gwlb-ws01.s3.us-west-2.amazonaws.com/images/stack-output2.png" alt="stack-output2"></p>
-</li>
+<li>Username is: <strong>admin</strong> Password is: <strong>qwe123!</strong></li>
+<li>Verify that the CloudGuard Network Security Gateways have been discovered by the Security Management Server (your IP addresses will likely be different)
+<img src="https://objectstorage.us-phoenix-1.oraclecloud.com/n/cloudguardiaas/b/aws-gwlb-workshopio-images/o/2022-04-16-AWS%20GWLB-003.png" alt=""></li>
 </ol>
 <h3 id="check-point-security-policy-setup">Check Point Security Policy Setup</h3>
 <p>Now, we need to login to the Check Point Web SmartConsole to setup an initial security policy for the workshop, which will allow us to test all traffic flows.</p>
 <h3 id="span-stylecolorred-security-disclaimer--this-is-a-sample-policy-for-this-workshop-only-and-it-not-suitable-for-a-production-environment-span"><!-- raw HTML omitted --> <strong>SECURITY DISCLAIMER – this is a sample policy for this WORKSHOP ONLY and it NOT SUITABLE for a production environment!!!!</strong> <!-- raw HTML omitted --></h3>
 <ol>
-<li>
-<p>From the CloudFormation Output, locate the Public IP provided for the Check Point Security Management Server</p>
-</li>
-<li>
-<p>Login to the Check Point SmartConsole application via web console SmartClient:</p>
+<li>Navigate to the Security Policies tab in SmartConsole
+<img src="https://objectstorage.us-phoenix-1.oraclecloud.com/n/cloudguardiaas/b/aws-gwlb-workshopio-images/o/2022-04-16-AWS%20GWLB-004.png" alt=""></li>
+<li>Create a new rule above the default <strong>Cleanup rule</strong>
+<img src="https://objectstorage.us-phoenix-1.oraclecloud.com/n/cloudguardiaas/b/aws-gwlb-workshopio-images/o/2022-04-16-AWS%20GWLB-005.png" alt=""></li>
+<li>The result should look like this&hellip;in this example we gave the rule the name <strong>Allow Outbound</strong>
+<img src="https://objectstorage.us-phoenix-1.oraclecloud.com/n/cloudguardiaas/b/aws-gwlb-workshopio-images/o/2022-04-16-AWS%20GWLB-006.png" alt=""></li>
+<li>Modify the new rule to allow the network <strong>10.100.0.0/16</strong> outbound access to <strong>ANY</strong></li>
+</ol>
 <ul>
-<li>Username: <strong>admin</strong>    Password: <strong>qwe123!</strong></li>
-<li>Web SmartConsole at <strong>https://publicIP/smartconsole</strong></li>
-</ul>
-<p><img src="https://chkp-gwlb-ws01.s3.us-west-2.amazonaws.com/images/smartconsole-web.png" alt="smartconsole-web"></p>
-<ul>
-<li>R81.10 SmartConsole Windows application &gt; Use Public IP from above
-<ul>
-<li>
-<p>If you need to install SmartConsole on Windows you can download <a href="https://supportcenter.checkpoint.com/supportcenter/portal/role/supportcenterUser/page/default.psml/media-type/html?action=portlets.DCFileAction&amp;eventSubmit_doGetdcdetails=&amp;fileid=121500">HERE</a></p>
-<p><img src="https://chkp-gwlb-ws01.s3.us-west-2.amazonaws.com/images/smartconsole-login.png" alt="smartconsole-login"></p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p>Once logged in, Verify that the CloudGuard Network Security Gateways have been discovered by the Security Management Server</p>
-<p><img src="https://chkp-gwlb-ws01.s3.us-west-2.amazonaws.com/images/gwlisting.png" alt="smartconsole-gwlisting"></p>
-</li>
-<li>
-<p>Now we, can create an initial Check Point Security Policy.  Navigate to the Security Policies tab in SmartConsole</p>
-</li>
-<li>
-<p>Create a new rule above the default Cleanup rule</p>
-<p><img src="https://chkp-gwlb-ws01.s3.us-west-2.amazonaws.com/images/secpolicy-create.png" alt="secpolicy-create"></p>
-<ul>
-<li>The result should look like this…in this example we gave the rule the name <strong>Allow Outbound</strong></li>
-</ul>
-<p><img src="https://chkp-gwlb-ws01.s3.us-west-2.amazonaws.com/images/secpolicy-new1.png" alt="secpolicy-new1"></p>
-</li>
-<li>
-<p>Modify the new rule to allow the network <strong>10.100.0.0/16</strong> outbound access to <strong>ANY</strong></p>
-<ul>
-<li>
-<p>Give your rule a name if preferred(not required)</p>
-</li>
-<li>
-<p>Add a new network object that represents <strong>10.100.0.0/16</strong> to the Source field</p>
-<p><img src="https://chkp-gwlb-ws01.s3.us-west-2.amazonaws.com/images/secpolicy-nwobject.png" alt="secpolicy-nwobject">
-<img src="https://chkp-gwlb-ws01.s3.us-west-2.amazonaws.com/images/secpolicy-objectdetail.png" alt="secpolicy-objectdetail"></p>
-</li>
-<li>
-<p>Result should look like this:</p>
-<ul>
-<li>Modify the rule so that Destination is <strong>ANY</strong></li>
-<li>Set Action to <strong>Accept</strong></li>
-<li>Set Track to <strong>Log</strong></li>
-</ul>
-<p><img src="https://chkp-gwlb-ws01.s3.us-west-2.amazonaws.com/images/secpolicy-newrule.png" alt="secpolicy-newrule"></p>
-</li>
-</ul>
-</li>
-<li>
-<p>Using the same procedure as above, create another rule that allows Inbound traffic to the following networks:</p>
-<ul>
+<li>Give your rule a name if preferred(not required)</li>
+<li>Add a new network object that represents <strong>10.100.0.0/16</strong> to the <strong>Source</strong> field
+<img src="https://objectstorage.us-phoenix-1.oraclecloud.com/n/cloudguardiaas/b/aws-gwlb-workshopio-images/o/2022-04-16-AWS%20GWLB-007.png" alt="">
+<img src="https://objectstorage.us-phoenix-1.oraclecloud.com/n/cloudguardiaas/b/aws-gwlb-workshopio-images/o/2022-04-16-AWS%20GWLB-008.png" alt=""></li>
+<li>Result should look like this:
+<img src="https://objectstorage.us-phoenix-1.oraclecloud.com/n/cloudguardiaas/b/aws-gwlb-workshopio-images/o/2022-04-16-AWS%20GWLB-009.png" alt=""></li>
+<li>Modify the rule so that Destination is <strong>ANY</strong>
+<img src="https://objectstorage.us-phoenix-1.oraclecloud.com/n/cloudguardiaas/b/aws-gwlb-workshopio-images/o/2022-04-16-AWS%20GWLB-010.png" alt=""></li>
+<li>Set the Service &amp; Applications field to be <strong>ANY</strong>
+<img src="https://objectstorage.us-phoenix-1.oraclecloud.com/n/cloudguardiaas/b/aws-gwlb-workshopio-images/o/2022-04-16-AWS%20GWLB-011.png" alt=""></li>
+<li>Set Action to <strong>Accept</strong>
+<img src="https://objectstorage.us-phoenix-1.oraclecloud.com/n/cloudguardiaas/b/aws-gwlb-workshopio-images/o/2022-04-16-AWS%20GWLB-012.png" alt=""></li>
+<li>Set Track to <strong>Log</strong>
+<img src="https://objectstorage.us-phoenix-1.oraclecloud.com/n/cloudguardiaas/b/aws-gwlb-workshopio-images/o/2022-04-16-AWS%20GWLB-013.png" alt=""></li>
+<li>The end result of the new rule should look like this:
+<img src="https://objectstorage.us-phoenix-1.oraclecloud.com/n/cloudguardiaas/b/aws-gwlb-workshopio-images/o/2022-04-16-AWS%20GWLB-014.png" alt=""></li>
+<li>Using the same procedure as above, create another rule that allows Inbound traffic to the following networks:</li>
 <li>10.100.0.0/16</li>
 <li>10.0.15.0/24</li>
 <li>10.0.25.0/24</li>
-<li>10.0.36.0/24</li>
-<li>Set the Cleanup Rule to <strong>Log</strong></li>
+<li>10.0.35.0/24</li>
 </ul>
-<p><img src="https://chkp-gwlb-ws01.s3.us-west-2.amazonaws.com/images/secpolicy-allrules.png" alt="secpolicy-allrules"></p>
-</li>
-<li>
-<p>Install Policy to push the new security policy to the Security Gateways</p>
-</li>
+<ol start="5">
+<li>When complete also set the <strong>Cleanup rule</strong> to Log.  The end result should look like this:
+<img src="https://objectstorage.us-phoenix-1.oraclecloud.com/n/cloudguardiaas/b/aws-gwlb-workshopio-images/o/2022-04-16-AWS%20GWLB-015.png" alt=""></li>
+<li><strong>Install Policy</strong> to push the new security policy to the Security Gateways
+<img src="https://objectstorage.us-phoenix-1.oraclecloud.com/n/cloudguardiaas/b/aws-gwlb-workshopio-images/o/2022-04-16-AWS%20GWLB-016.png" alt="">
+<img src="https://objectstorage.us-phoenix-1.oraclecloud.com/n/cloudguardiaas/b/aws-gwlb-workshopio-images/o/2022-04-16-AWS%20GWLB-017.png" alt=""></li>
 </ol>
-<p><img src="https://chkp-gwlb-ws01.s3.us-west-2.amazonaws.com/images/secpolicy-install.png" alt="secpolicy-install">
-<img src="https://chkp-gwlb-ws01.s3.us-west-2.amazonaws.com/images/secpolicy-publishinstall.png" alt="secpolicy-publishinstall"></p>
 
 <div class="notices warning" ><!-- raw HTML omitted -->
 </div>
@@ -698,22 +670,6 @@
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                     
                 
                 
@@ -885,7 +841,7 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/01gettingstarted/4_trafficflows.html" title="Traffic Flows"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/01gettingstarted/3_gwlbeoptions.html" title="GWLBe Options"> <i class="fa fa-chevron-left"></i></a>
 		
 		
 			<a class="nav nav-next" href="/01gettingstarted/6_testhostlogin.html" title="Test Host Login" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
@@ -898,19 +854,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1656620320"></script>
-    <script src="/js/perfect-scrollbar.min.js?1656620320"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1656620320"></script>
-    <script src="/js/jquery.sticky.js?1656620320"></script>
-    <script src="/js/featherlight.min.js?1656620320"></script>
-    <script src="/js/highlight.pack.js?1656620320"></script>
+    <script src="/js/clipboard.min.js?1664413240"></script>
+    <script src="/js/perfect-scrollbar.min.js?1664413240"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1664413240"></script>
+    <script src="/js/jquery.sticky.js?1664413240"></script>
+    <script src="/js/featherlight.min.js?1664413240"></script>
+    <script src="/js/highlight.pack.js?1664413240"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1656620320"></script>
-    <script src="/js/learn.js?1656620320"></script>
-    <script src="/js/hugo-learn.js?1656620320"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1664413240"></script>
+    <script src="/js/learn.js?1664413240"></script>
+    <script src="/js/hugo-learn.js?1664413240"></script>
     
         
-            <script src="/mermaid/mermaid.js?1656620320"></script>
+            <script src="/mermaid/mermaid.js?1664413240"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
